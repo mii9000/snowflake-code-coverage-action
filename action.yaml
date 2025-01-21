@@ -35,5 +35,5 @@ outputs:
     description: Status of the Snowflake upload.
 
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: node16
+  main: dist/index.js
