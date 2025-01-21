@@ -1,4 +1,4 @@
-name: Push Code Coverage to Snowflake
+name: Pytest, Go Code Coverage to Snowflake
 description: Uploads code coverage data from a coverage file to Snowflake.
 
 inputs:
