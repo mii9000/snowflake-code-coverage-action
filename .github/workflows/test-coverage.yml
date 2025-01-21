@@ -1,0 +1,37 @@
+name: Test Coverage Action
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Push Code Coverage to Snowflake
+        uses: mii9000/snowflake-code-coverage-action@1.0.0
+        with:
+          repo_name: 'test-repo'
+          coverage_tool: 'pytest'
+          coverage_file: './test/pytest-coverage.txt'
+        env:
+          SNOWFLAKE_HOST: ${{ secrets.SNOWFLAKE_HOST }}
+          SNOWFLAKE_USERNAME: ${{ secrets.SNOWFLAKE_USERNAME }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+          SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
+          SNOWFLAKE_SCHEMA: ${{ secrets.SNOWFLAKE_SCHEMA }}
+          SNOWFLAKE_TABLE: ${{ secrets.SNOWFLAKE_TABLE }}

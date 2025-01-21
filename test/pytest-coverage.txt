@@ -1,0 +1,145 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.11, pytest-7.4.4, pluggy-1.5.0 -- /Users/mohammedibrahimislam/Desktop/ice/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/mohammedibrahimislam/Desktop/ice
+plugins: ddtrace-2.16.0, httpx-0.30.0, cov-4.1.0, asyncio-0.21.2, anyio-4.6.2.post1
+asyncio: mode=Mode.STRICT
+collecting ... collected 99 items
+
+tests/authentication/egress/flags/test_flags_hmac_authorized_client.py::TestFlagsHmacHttpClient::test_send PASSED [  1%]
+tests/authentication/egress/flags/test_flags_hmac_signature.py::TestHmacAuthorizedHttpHeader::test__generate_signature PASSED [  2%]
+tests/authentication/egress/flags/test_flags_hmac_signature.py::TestHmacAuthorizedHttpHeader::test__generate_signature_headers PASSED [  3%]
+tests/authentication/egress/flags/test_flags_hmac_signature.py::TestHmacAuthorizedHttpHeader::test__get_authz_header PASSED [  4%]
+tests/authentication/egress/flags/test_flags_hmac_signature.py::TestHmacAuthorizedHttpHeader::test__get_date_header PASSED [  5%]
+tests/authentication/egress/flags/test_flags_hmac_signature.py::TestHmacAuthorizedHttpHeader::test__get_digest_header PASSED [  6%]
+tests/authentication/egress/flags/test_flags_hmac_signature.py::TestHmacAuthorizedHttpHeader::test__get_request_line PASSED [  7%]
+tests/authentication/egress/flags/test_flags_hmac_signature.py::TestHmacAuthorizedHttpHeader::test__get_signature_string PASSED [  8%]
+tests/authentication/egress/flags/test_flags_hmac_signature.py::TestHmacAuthorizedHttpHeader::test_get_hmac_header PASSED [  9%]
+tests/authentication/egress/itpo_internal_token/test_internal_token.py::InternalTokenTest::test_internal_token_init PASSED [ 10%]
+tests/authentication/egress/itpo_internal_token/test_internal_token.py::InternalTokenTest::test_token_expiration_timestamp PASSED [ 11%]
+tests/authentication/egress/itpo_internal_token/test_token_generator.py::TokenGeneratorTest::test_generate_internal_token PASSED [ 12%]
+tests/authentication/egress/itpo_internal_token/test_token_generator.py::TokenGeneratorTest::test_token_generator_init PASSED [ 13%]
+tests/authentication/egress/turnstile/test_hmac_authorized_client.py::TestTurnstileHmacClient::test_request_headers PASSED [ 14%]
+tests/authentication/egress/turnstile/test_hmac_authorized_client.py::TestTurnstileHmacClient::test_request_with_body_headers PASSED [ 15%]
+tests/cmp/test_routes.py::test_exp_turnstile_instance_cmp_organizations[c4904cc42e184609a8a88aa1e324bd8f-200-expected_response0] PASSED [ 16%]
+tests/cmp/test_routes.py::test_exp_turnstile_instance_cmp_organizations[non-existent-id-400-expected_response1] PASSED [ 17%]
+tests/cmp/test_routes.py::test_exp_turnstile_instance_cmp_organizations[timeout-instance-500-expected_response2] PASSED [ 18%]
+tests/cmp/test_routes.py::test_exp_turnstile_instance_cmp_organizations[invalid-json-500-expected_response3] PASSED [ 19%]
+tests/cmp/test_routes.py::test_experimentation_project_linkable_cmp_organizations PASSED [ 20%]
+tests/exp_changelog/test_service.py::TestChangelogEventProcessor::test_process_experiment_event[event0-test_data0] PASSED [ 21%]
+tests/exp_changelog/test_service.py::TestChangelogEventProcessor::test_process_experiment_event[event1-test_data1] PASSED [ 22%]
+tests/exp_changelog/test_service.py::TestChangelogEventProcessor::test_process_event_with_no_link PASSED [ 23%]
+tests/exp_changelog/test_service.py::TestChangelogEventProcessor::test_process_fx_event_with_change_type_not_update PASSED [ 24%]
+tests/exp_changelog/test_service.py::TestTransformFxEventToChangelogEvent::test_with_valid_event PASSED [ 25%]
+tests/exp_changelog/test_service.py::TestTransformFxEventToChangelogEvent::test_with_no_link PASSED [ 26%]
+tests/experimentation/test_services.py::test_get_project_async[project_data0-ExpProjectType.FLAGS] PASSED [ 27%]
+tests/experimentation/test_services.py::test_get_project_async[project_data1-ExpProjectType.WEB] PASSED [ 28%]
+tests/experimentation/test_services.py::test_get_project_async_invalid_project_id PASSED [ 29%]
+tests/experimentation/test_services.py::test_get_project[project_data0-ExpProjectType.FLAGS] PASSED [ 30%]
+tests/experimentation/test_services.py::test_get_project[project_data1-ExpProjectType.WEB] PASSED [ 31%]
+tests/experimentation/test_services.py::test_get_project_invalid_project_id PASSED [ 32%]
+tests/experimentation/test_services.py::test_project_has_permissions[6950572362-response_json0-required_permissions0-True] PASSED [ 33%]
+tests/experimentation/test_services.py::test_project_has_permissions[6950572362-response_json1-required_permissions1-False] PASSED [ 34%]
+tests/experimentation/test_services.py::test_project_has_permissions[6950572362-response_json2-required_permissions2-True] PASSED [ 35%]
+tests/experimentation/test_services.py::test_project_has_permissions[6950572362-response_json3-required_permissions3-False] PASSED [ 36%]
+tests/experimentation/test_services.py::test_project_has_permissions[6950572362-response_json4-required_permissions4-False] PASSED [ 37%]
+tests/experimentation/test_services.py::test_project_has_permissions[6973727208-response_json5-required_permissions5-False] PASSED [ 38%]
+tests/experimentation/test_services.py::test_project_has_permissions[6973727207-response_json6-required_permissions6-False] PASSED [ 39%]
+tests/experimentation/test_services.py::test_filter_and_map_experiment_metadata PASSED [ 40%]
+tests/flags/test_service.py::TestFlagService::test_get_fetch_rule_url PASSED [ 41%]
+tests/flags/test_service.py::TestFlagService::test_get_flags PASSED      [ 42%]
+tests/flags/test_service.py::TestFlagService::test_get_environments PASSED [ 43%]
+tests/flags/test_service.py::TestFlagService::test_get_rule PASSED       [ 44%]
+tests/flags/test_service.py::TestFlagService::test_get_invalid_rule_raises_bad_request PASSED [ 45%]
+tests/flags/test_service.py::TestFlagService::test_get_rule_for_different_types[rule_ab-a/b] PASSED [ 46%]
+tests/flags/test_service.py::TestFlagService::test_get_rule_for_different_types[rule_targeted_delivery-targeted_delivery] PASSED [ 47%]
+tests/flags/test_service.py::TestFlagService::test_get_rule_for_different_types[rule_multi_armed_bandit-multi_armed_bandit] PASSED [ 48%]
+tests/flags/test_service.py::TestFlagService::test_get_fetch_rule_url_by_experiment_id PASSED [ 49%]
+tests/flags/test_service.py::TestFlagService::test_get_rule_by_experiment_id PASSED [ 50%]
+tests/flags/test_service.py::TestFlagService::test_get_converted_variations PASSED [ 51%]
+tests/flags/test_service.py::TestFlagService::test_get_audience_match_type[audience_conditions0-any_audiences] PASSED [ 52%]
+tests/flags/test_service.py::TestFlagService::test_get_audience_match_type[audience_conditions1-all_audiences] PASSED [ 53%]
+tests/flags/test_service.py::TestFlagService::test_get_audience_match_type[audience_conditions2-any_audiences] PASSED [ 54%]
+tests/flags/test_service.py::TestFlagService::test_get_audience_match_type[audience_conditions3-custom_audiences] PASSED [ 55%]
+tests/flags/test_service.py::TestFlagService::test_get_audience_match_type[audience_conditions4-custom_audiences] PASSED [ 56%]
+tests/flags/test_service.py::TestFlagService::test_get_audience_match_type[audience_conditions5-custom_audiences] PASSED [ 57%]
+tests/flags/test_service.py::TestFlagService::test_get_audience_match_type[audience_conditions6-custom_audiences] PASSED [ 58%]
+tests/flags/test_service.py::TestFlagService::test_get_rule_details PASSED [ 59%]
+tests/flags/test_service.py::TestFlagService::test_get_deleted_rule_details PASSED [ 60%]
+tests/link_exp_experiment_cmp_hypothesis/test_routes.py::TestLinkExpHpt::test_link_all_types[7206241236-multiarmed_bandit] PASSED [ 61%]
+tests/link_exp_experiment_cmp_hypothesis/test_routes.py::TestLinkExpHpt::test_link_all_types[7218070077-multivariate] PASSED [ 62%]
+tests/link_exp_experiment_cmp_hypothesis/test_routes.py::TestLinkExpHpt::test_link_all_types[7226842375-a/b] PASSED [ 63%]
+tests/link_exp_experiment_cmp_hypothesis/test_routes.py::TestLinkExpHpt::test_link_all_types[7141702773-personalization] PASSED [ 64%]
+tests/link_exp_experiment_cmp_hypothesis/test_routes.py::TestLinkExpHpt::test_link_without_project_org_connection PASSED [ 65%]
+tests/link_exp_experiment_cmp_hypothesis/test_routes.py::TestLinkExpHpt::test_get_link_no_connection PASSED [ 66%]
+tests/link_exp_experiment_cmp_hypothesis/test_routes.py::TestLinkExpHpt::test_get_stale_link_without_project_org_connection PASSED [ 67%]
+tests/link_exp_experiment_cmp_hypothesis/test_routes.py::TestLinkExpHpt::test_create_same_link PASSED [ 68%]
+tests/link_exp_experiment_cmp_hypothesis/test_routes.py::TestLinkExpHpt::test_update_link_without_deleting PASSED [ 69%]
+tests/link_exp_experiment_cmp_hypothesis/test_routes.py::TestUnlinkExpHpt::test_unlink PASSED [ 70%]
+tests/link_exp_experiment_cmp_hypothesis/test_routes.py::TestUnlinkExpHpt::test_get_link_after_unlink PASSED [ 71%]
+tests/link_exp_experiment_cmp_hypothesis/test_routes.py::TestUnlinkExpHpt::test_unlink_multiple_times PASSED [ 72%]
+tests/link_exp_experiment_cmp_hypothesis/flags/test_flags_routes.py::TestLinkFlagExpHpt::test_basic_rule_link PASSED [ 73%]
+tests/link_exp_experiment_cmp_hypothesis/flags/test_flags_routes.py::TestLinkFlagExpHpt::test_rule_link[rule_ab-a/b] PASSED [ 74%]
+tests/link_exp_experiment_cmp_hypothesis/flags/test_flags_routes.py::TestLinkFlagExpHpt::test_rule_link[rule_targeted_delivery-targeted_delivery] PASSED [ 75%]
+tests/link_exp_experiment_cmp_hypothesis/flags/test_flags_routes.py::TestLinkFlagExpHpt::test_rule_link[rule_multi_armed_bandit-multi_armed_bandit] PASSED [ 76%]
+tests/link_exp_experiment_cmp_hypothesis/flags/test_flags_routes.py::TestLinkFlagExpHpt::test_rule_link_validation PASSED [ 77%]
+tests/link_exp_experiment_cmp_hypothesis/flags/test_flags_routes.py::TestLinkFlagExpHpt::test_rule_link_with_invalid_rule PASSED [ 78%]
+tests/link_exp_experiment_cmp_hypothesis/flags/test_flags_routes.py::TestLinkFlagExpHpt::test_get_link_after_rule_deleted PASSED [ 79%]
+tests/link_exp_experiment_cmp_hypothesis/get_experiments/test_get_experiments.py::TestExpWebProjectExperiments::test_get_experiments_web_without_linked_hypothesis PASSED [ 80%]
+tests/link_exp_experiment_cmp_hypothesis/get_experiments/test_get_experiments.py::TestExpWebProjectExperiments::test_get_experiments_web_with_linked_hypothesis PASSED [ 81%]
+tests/link_exp_experiment_cmp_hypothesis/get_experiments/test_get_experiments.py::TestExpFlagsProjectExperiments::test_get_experiments_flags_without_linked_hypothesis PASSED [ 82%]
+tests/link_exp_experiment_cmp_hypothesis/get_experiments/test_get_experiments.py::TestExpFlagsProjectExperiments::test_get_experiments_flags_with_linked_hypothesis PASSED [ 83%]
+tests/link_exp_experiment_cmp_hypothesis/get_experiments/test_get_experiments.py::TestExpFlagsProjectExperiments::test_get_experiments_with_mapped_flag_name_env_name_with_deleted_flag PASSED [ 84%]
+tests/link_exp_experiment_cmp_hypothesis/get_experiments/test_get_experiments.py::TestESSResponseRegression::test_get_experiments_pagination_and_sort[1-3-name-asc] PASSED [ 85%]
+tests/link_exp_experiment_cmp_hypothesis/get_experiments/test_get_experiments.py::TestESSResponseRegression::test_get_experiments_pagination_and_sort[2-3-name-asc] PASSED [ 86%]
+tests/link_exp_experiment_cmp_hypothesis/get_experiments/test_get_experiments.py::TestESSResponseRegression::test_get_experiments_pagination_and_sort[1-3-name-desc] PASSED [ 87%]
+tests/link_exp_experiment_cmp_hypothesis/get_experiments/test_get_experiments.py::TestESSResponseRegression::test_get_experiments_pagination_and_sort[1-3-last_modified-asc] PASSED [ 88%]
+tests/link_exp_experiment_cmp_hypothesis/get_experiments/test_get_experiments.py::TestESSResponseRegression::test_get_experiments_pagination_and_sort[1-3-last_modified-desc] PASSED [ 89%]
+tests/link_exp_project_cmp_org/test_routes.py::TestLinkExpProjectCmpOrg::test_link_with_invalid_org PASSED [ 90%]
+tests/link_exp_project_cmp_org/test_routes.py::TestLinkExpProjectCmpOrg::test_link_exp_project_cmp_org_no_access PASSED [ 91%]
+tests/link_exp_project_cmp_org/test_routes.py::TestLinkExpProjectCmpOrg::test_valid_link_exp_project_cmp_org PASSED [ 92%]
+tests/link_exp_project_cmp_org/test_routes.py::TestLinkExpProjectCmpOrg::test_link_multiple_exp_project_cmp_org PASSED [ 93%]
+tests/link_exp_project_cmp_org/test_routes.py::TestUpdateLink::test_update_link PASSED [ 94%]
+tests/link_exp_project_cmp_org/test_routes.py::TestUpdateLink::test_unlink_org PASSED [ 95%]
+tests/logger/test_asgi_access_log.py::test_get_log_level[200-20] PASSED  [ 96%]
+tests/logger/test_asgi_access_log.py::test_get_log_level[400-30] PASSED  [ 97%]
+tests/logger/test_asgi_access_log.py::test_get_log_level[500-40] PASSED  [ 98%]
+tests/logger/test_asgi_access_log.py::test_get_log_level[300-20] PASSED  [100%]
+
+---- generated xml file: /Users/mohammedibrahimislam/Desktop/ice/pytest.xml ----
+
+--------- coverage: platform darwin, python 3.11.11-final-0 ----------
+Name                                                                             Stmts   Miss  Cover   Missing
+--------------------------------------------------------------------------------------------------------------
+api/main.py                                                                         55      7    87%   40, 75, 116-120
+src/authentication/egress/experimentation/experimentation_authorized_client.py     125     15    88%   57, 60, 83, 100, 170-178, 212-213
+src/authentication/egress/itpo_internal_token/token_generator.py              12      1    92%   13
+src/authorization/dependency.py                                                     35     24    31%   17-30, 35-47
+src/authorization/permission_validator.py                                           44     18    59%   20, 28-37, 40, 45, 54-58, 62, 68, 86-87
+src/cmp/service.py                                                                  46      8    83%   30, 83, 95-103
+src/common/api/misc_routes.py                                                       15      4    73%   12, 17-18, 23
+src/common/base_repository.py                                                       20      5    75%   23-25, 28, 36
+src/common/database/functions.py                                                    12      1    92%   13
+src/common/database/pagination.py                                                   34     17    50%   11-19, 23, 27, 31-33, 37, 40, 43, 47
+src/common/dependencies.py                                                          12      3    75%   15-17
+src/common/exceptions/database.py                                                    3      1    67%   3
+src/common/exceptions/http.py                                                       37     12    68%   28-30, 46-48, 53-55, 60-62
+src/common/http_client.py                                                          133     18    86%   92, 94, 97-102, 130-132, 185, 190-195
+src/common/retry_decorator.py                                                       21      7    67%   23, 26-32
+src/exp_changelog/routes.py                                                          9      2    78%   13-14
+src/exp_changelog/service.py                                                        45      2    96%   89-103
+src/experimentation/dtos.py                                                        159      1    99%   166
+src/experimentation/service.py                                                     135      8    94%   72-73, 85, 149, 193-194, 270-271
+src/flags/service.py                                                                75     12    84%   78-83, 115-120, 139, 192-196
+src/link_exp_experiment_cmp_hypothesis/repositories.py                              38      6    84%   39, 98-102
+src/link_exp_experiment_cmp_hypothesis/service.py                                  104     11    89%   80, 86, 96, 152-153, 156, 168, 235, 256-261
+src/link_exp_project_cmp_org/models.py                                              21      2    90%   27, 30
+src/link_exp_project_cmp_org/service.py                                             60      5    92%   38, 53, 63, 87-88
+src/logger/asgi_access_log.py                                                       49      4    92%   29, 46-48
+src/logger/default_logger.py                                                        22      6    73%   11-17
+--------------------------------------------------------------------------------------------------------------
+TOTAL                                                                             1797    200    89%
+
+46 files skipped due to complete coverage.
+
+============================== 99 passed in 4.55s ==============================

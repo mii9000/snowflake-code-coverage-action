@@ -1,0 +1,22 @@
+{
+  "name": "snowflake-code-coverage-action",
+  "version": "1.0.0",
+  "description": "GitHub Action to push code coverage data to Snowflake",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "ncc build index.js -o dist"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.3",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "snowflake-sdk": "^1.9.0"
+  },
+  "jest": {
+    "automock": false,
+    "clearMocks": true,
+    "resetMocks": true
+  }
+}

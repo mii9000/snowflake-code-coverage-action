@@ -1,0 +1,39 @@
+name: Push Code Coverage to Snowflake
+description: Uploads code coverage data from a coverage file to Snowflake.
+
+inputs:
+  repo_name:
+    description: Name of the repository
+    required: true
+  coverage_tool:
+    description: Code Coverage tool being used (must be either 'pytest' or 'go')
+    required: true
+  coverage_file:
+    description: Path to the coverage file (e.g., `coverage.out`, `pytest-coverage.txt`)
+    required: true
+  snowflake_host:
+    description: Snowflake host URL
+    required: true
+  snowflake_username:
+    description: Snowflake username
+    required: true
+  snowflake_password:
+    description: Snowflake password
+    required: true
+  snowflake_database:
+    description: Snowflake database
+    required: true
+  snowflake_schema:
+    description: Snowflake schema
+    required: true
+  snowflake_table:
+    description: Snowflake table
+    required: true
+
+outputs:
+  status:
+    description: Status of the Snowflake upload.
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
